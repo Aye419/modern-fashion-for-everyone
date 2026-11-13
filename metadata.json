@@ -1,0 +1,6 @@
+{
+  "name": "HARUNA",
+  "description": "HARUNA — Wear The Change. Modern fashion and clothing e-commerce storefront.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
