@@ -464,11 +464,16 @@ export const VideoModal: React.FC<VideoModalProps> = ({ open, onClose, onShopCol
         </div>
 
         <div className="relative bg-[#11141B] p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
-          <img
-            src="/images/hero_scene.png"
-            alt="HARUNA 2026 collection showcase"
-            className="w-full sm:w-[55%] rounded-2xl object-cover shadow-lg"
-            referrerPolicy="no-referrer"
+          <video
+            src="/videos/haruna_lookbook.mp4"
+            poster="/images/hero_scene.png"
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+            aria-label="HARUNA 2026 lookbook video showcasing changing outfits, caps, sneakers, and goggles"
+            className="w-full sm:w-[55%] rounded-2xl object-cover shadow-lg aspect-square bg-[#0A0C10]"
           />
           <div className="flex-1 text-white">
             <h3 className="text-[22px] font-extrabold leading-tight">

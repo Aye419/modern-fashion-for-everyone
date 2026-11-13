@@ -66,18 +66,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         transparent
       />
 
-      {/* Right-side Studio Visual Arrangement (Desktop absolute so hanger & top-right align identically to reference) */}
-      <div className="hidden lg:block lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:w-[51%] pointer-events-none select-none z-0">
+      {/* Unified Hero Visual (always together with the hero writing, positioned on right/background) */}
+      <div className="absolute right-0 top-0 bottom-0 w-full sm:w-[62%] md:w-[55%] lg:w-[51%] pointer-events-none select-none z-0">
         <img
           src="/images/hero_scene.png"
           alt="HARUNA black oversized H logo t-shirt on hanger, black HARUNA cap, black-and-white sneakers on white pedestal, black sunglasses, and green indoor plant"
           className="w-full h-full object-cover object-right"
           referrerPolicy="no-referrer"
         />
+        <div
+          className="lg:hidden absolute inset-0 bg-gradient-to-r from-white via-white/88 sm:via-white/75 to-white/15"
+          aria-hidden="true"
+        />
       </div>
 
-      {/* Left-side Content Column */}
-      <div className="relative z-10 lg:w-[54%] px-6 sm:px-10 lg:pl-12 lg:pr-4 pt-3 pb-7 lg:pt-6 lg:pb-9">
+      {/* Left-side Content Column (always on top of the visual) */}
+      <div className="relative z-10 sm:w-[68%] md:w-[60%] lg:w-[54%] px-6 sm:px-10 lg:pl-12 lg:pr-4 pt-3 pb-8 lg:pt-6 lg:pb-9">
         <p className="text-[11px] sm:text-[11.5px] font-bold tracking-[0.14em] text-[#0055FF] uppercase">
           TRENDY &bull; STYLISH &bull; PREMIUM
         </p>
@@ -135,18 +139,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </div>
             );
           })}
-        </div>
-      </div>
-
-      {/* Mobile / Tablet Hero Visual */}
-      <div className="lg:hidden px-4 pb-4">
-        <div className="rounded-[20px] overflow-hidden bg-[#F4F6FC]">
-          <img
-            src="/images/hero_scene.png"
-            alt="HARUNA featured collection showcase"
-            className="w-full h-auto object-cover"
-            referrerPolicy="no-referrer"
-          />
         </div>
       </div>
     </section>
